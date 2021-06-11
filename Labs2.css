@@ -1,0 +1,44 @@
+body{
+    background-size: 500px;
+    background-repeat: no-repeat;
+}
+
+hr {
+    width: 100%;
+    size: 200px;
+    line-height: 50px;
+    margin-top: 40px;
+    font-weight: bold;
+    color: chocolate;
+}
+
+p{
+    color: /* RGB  HEX (0 1 2 3 4 5 6 7 8 9 A B C D E F) Name */
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100 ;/* 100 300 400(normal) 500 600 700(bold) 800 */
+    text-decoration: none;/* underline line-through overline none */
+    text-transform: none;/* lowercase uppercase capitalize  none*/
+    line-height: 1.5;
+    font-style: normal;/* italic  normal*/
+    text-align: left;/* left  right center justify */
+}
+
+div{
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3{
+    font-size: 35px;
+    color: coral;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: 600;
+}
+
+c{
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    text-indent: 1000px;
+}
