@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #14182a !important;
+    font-family: 'Josefin Sans', sans-serif; !important;
+}
+
+.header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #1b2039;
+    line-height: 80px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+}
+.header .title {
+    float: right;
+    text-decoration: none;
+    color: #2cc8e5;
+    font-size: 16px;
+}
+.header .description {
+    float: left;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    max-width: 500px;
+    text-overflow: ellipsis;
+}
+
+.main{
+    margin-top: 100px;
+}
+
+.main-title {
+    float: left;
+    text-decoration: none;
+    color: #2cc8e5;
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 20px 0;
+}
+.title{
+    float: left;
+    text-decoration: none;
+    color: #2cc8e5;
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main h3{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+}
+.item {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.item h3{
+    font-size: 19px;
+}
+
+p{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    font-weight: lighter;
+}
+.recently-played{
+    margin-top: 50px;
+}
+
+.bottomlinks{
+    text-align: center;
+    width: 50%;
+    margin: 15px 100px;
+}
+.bottomlinks ul{
+    float: right;
+}
+.bottomlinks li{
+    float: left;
+    list-style: none;
+    margin-left: 25px;
+}
+.bottomlinks  a{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 52px;
+}
+
+hr {
+    width: 100%;
+    size: 200px;
+    line-height: 50px;
+    margin-top: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.middle h1{
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    color: #2cc8e5;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer h3 {
+    text-decoration: none;
+    color: #2cc8e5;
+    font-size: 25px;
+}
+
+.middle img{
+    margin: 30px 190px;
+    opacity: 0.75;
+}
+.middle audio {
+    margin-left: 400px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.middle h3{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+.songs-description {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.songs-description h3{
+    margin-top: 15px;
+}
+
