@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment JS 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<section class="col-md-12">
+    <h1 id="title" style="text-transform: uppercase">Menu Lotteria</h1>
+    <div class="header" id="header"></div>
+    <button type="button" onclick="loadMore()" style="width: 150px; height: 40px; text-align: center; background-color: coral; color: white"><b> Xem Menu</b></button>
+    <div class="grid" style="margin: 50px">
+        <div class="row" id="row">
+
+        </div>
+    </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    function loadMore() {
+        var p = [];
+        $.ajax({
+            url: "data/assignmentjs3.json",
+            method:"GET",
+            success:function (rs){
+                p = rs.data.foods;
+                var row = $("#row");
+                for (var i = 0; i < p.length; i++) {
+                    var ct = "<div class=\"item\">\n" +
+                        "            <img src=\"" + p[i].image + "\"/>\n" +
+                        "            <h2>" + p[i].name + "</h2>\n" +
+                        "            <h2>" + p[i].price +"</h2>\n" +
+                        "            <a href=\"demojquery3.html\">Chi tiết</a>\n" +
+                        "        </div>";
+                    row.append(ct);
+
+                }
+            }
+
+        });
+    }
+</script>
+</body>
+</html>
