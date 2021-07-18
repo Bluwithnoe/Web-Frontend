@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hanoi Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="col-md-2">
+        <img src="https://openweathermap.org/img/w/04d.png" width="150" height="150">
+    </div>
+    <div class="col-md-5">
+        <h1>Nhiệt độ: <span id="temp"></span><sup>o</sup>C</h1>
+        <h3>Độ ẩm: <span id="hum"></span>%</h3>
+        <h3>Gió: <span id="wind"></span>km/h</h3>
+    </div>
+    <div class="col-md-5">
+        <h2><span id="city"></span></h2>
+        <h4><span id="desc"></span></h4>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $.ajax ({
+        url: "https://api.openweathermap.org/data/2.5/weather?q=hanoi,vietnam&&units=metric&appid=09a71427c59d38d6a34f89b47d75975c",
+        method: "GET",
+        data:{
+            q:"Hanoi, Vietnam",
+            appid:"09a71427c59d38d6a34f89b47d75975c",
+            units:"metric"
+        },
+        success:function (rs){
+            $("#temp").text(rs.main.temp);
+            $("#hum").text(rs.main.humidity);
+            $("#wind").text(rs.wind.speed);
+            $("#city").text(rs.name+","+rs.sys.country);
+            for(var i=0;i<rs.weather.length;i++){
+                $("#desc").text(rs.weather[i].main+","+rs.weather[i].description);
+            }
+        }
+    })
+
+</script>
+</body>
+</html>
