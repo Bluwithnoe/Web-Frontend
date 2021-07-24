@@ -95,10 +95,6 @@
             <label><input type="checkbox" name="qualification">BSC</label>
           </th>
         </tr>
-        <tr>
-          <th><button type="submit" class="btn" id="continue">Continue</button></th>
-        </tr>
-
       </form>
     </table>
   </div>
@@ -170,28 +166,18 @@
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p>THANK YOU FOR DOING OUR SURVEY</p>
+      <p>THANK YOU FOR DOING OUR SURVEY!</p>
     </div>
 
   </div>
 
   <script>
-    const target = document.getElementById("table2");
-    const btn = document.getElementById("continue");
-    btn.onclick = function () {
-      if (target.style.display !== "none") {
-        target.style.display = "none";
-      } else {
-        target.style.display = "block";
-      }
-    };
-
     var modal = document.getElementById("myModal");
-    var button = document.getElementById("submit");
+    var btn = document.getElementById("submit");
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
-    button.onclick = function() {
+    btn.onclick = function() {
       modal.style.display = "block";
     }
 
