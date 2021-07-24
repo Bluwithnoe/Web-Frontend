@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical Exercise</title>
+    <style>
+      table, th, td {
+        background-color: #e4e4e4;
+      }
+      th, td {
+        padding: 5px;
+        text-align: left;
+      }
+      .headline h1:hover {
+        color: red;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+      }
+
+      .modal-content {
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+</head>
+
+<body>
+
+  <div class="headline" style="display: block; margin: 10px auto">
+    <h1>MATRIMONIAL SURVEY</h1>
+  </div>
+
+  <div class="container" style="max-width:600px; padding: 8px 16px !important;display: block; margin: 50px auto">
+    <table id="table1" style="width: 100%">
+      <form id="form" method="post">
+        <tr>
+          <th>Name</th>
+          <th><input type="text" name="name" required></th>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <th><input type="text" name="name" required></th>
+        </tr>
+        <tr>
+          <th>Phone</th>
+          <th><input type="text" name="name" required></th>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <th><input type="text" name="name" required></th>
+        </tr>
+        <tr>
+          <th>Gender</th>
+          <th>
+            <label><input type="radio" name="gender" value="male"/> Male </label>
+            <label><input type="radio" name="gender" value="female"/> Female </label>
+          </th>
+        </tr>
+        <tr>
+          <th>Age</th>
+          <th><input type="text" name="age" required></th>
+        </tr>
+        <tr>
+          <th>Qualification</th>
+          <th>
+            <label><input type="checkbox" name="qualification" >BCA</label>
+            <label><input type="checkbox" name="qualification">BA</label>
+            <label><input type="checkbox" name="qualification">BSC</label>
+          </th>
+        </tr>
+        <tr>
+          <th><button type="submit" class="btn" id="continue">Continue</button></th>
+        </tr>
+
+      </form>
+    </table>
+  </div>
+
+  <div class="container" style="max-width:800px; padding: 8px 16px !important;display: none; margin: 50px auto">
+    <table id="table2" style="width: 100%">
+      <form id="form" method="post">
+        <tr>
+          <th>How often are you surfing this site?</th>
+          <th>
+            <label><input type="radio" /> Daily </label>
+            <label><input type="radio"/> Weekly </label>
+            <label><input type="radio" /> Monthly </label>
+          </th>
+        </tr>
+        <tr>
+          <th>Which matrimonial site do you visit most?</th>
+          <th><input type="text" required></th>
+        </tr>
+        <tr>
+          <th>Where do you use internet?</th>
+          <th>
+            <label><input type="radio"/> Home </label>
+            <label><input type="radio"/> Office </label>
+            <label><input type="radio"/> Cyber Cafe </label>
+          </th>
+        </tr>
+        <tr>
+          <th>Are you feel services provided by us?</th>
+          <th>
+            <label><input type="radio"/> Fair </label>
+            <label><input type="radio"/> Good</label>
+            <label><input type="radio"/> Very good </label>
+            <label><input type="radio"/> Excellent </label>
+          </th>
+        </tr>
+        <tr>
+          <th>Which type of member you are?</th>
+          <th>
+            <label><input type="radio"/> Free </label>
+            <label><input type="radio"/> Premium </label>
+            <label><input type="radio"/> Gold</label>
+          </th>
+        </tr>
+        <tr>
+          <th>If you are a free member, would you like to take paid services?</th>
+          <th>
+            <label><input type="radio"/> Yes </label>
+            <label><input type="radio"/> No </label>
+            <label><input type="radio"/> I'll think </label>
+          </th>
+        </tr>
+        <tr>
+          <th>Rate this website. </th>
+          <th>
+            <label><input type="radio"/> Below 5 </label>
+            <label><input type="radio"/> 5 to 10 </label>
+            <label><input type="radio"/> More than 10 </label>
+          </th>
+        </tr>
+        <tr>
+          <th><button id="submit" type="submit" class="btn">Submit</button></th>
+        </tr>
+
+      </form>
+    </table>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>THANK YOU FOR DOING OUR SURVEY</p>
+    </div>
+
+  </div>
+
+  <script>
+    const target = document.getElementById("table2");
+    const btn = document.getElementById("continue");
+    btn.onclick = function () {
+      if (target.style.display !== "none") {
+        target.style.display = "none";
+      } else {
+        target.style.display = "block";
+      }
+    };
+
+    var modal = document.getElementById("myModal");
+    var button = document.getElementById("submit");
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    button.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
