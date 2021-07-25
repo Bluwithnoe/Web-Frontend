@@ -3,11 +3,12 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
+    margin: auto;
 }
 .top{
     float:left;
     width: 1200px;
-    background-color: #aabbcc;
+    background-color: lightcoral;
     padding: 50px 0 ;
 }
 h1{
@@ -25,22 +26,38 @@ h2{
     text-align: center;
     margin: 0;
 }
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
 .bottom{
     float: left;
     width: 1200px;
 }
 .left{
     float: left;
-    width: 250px;
-    text-align: center;
+    width: 230px;
+    text-align: left;
     padding: 50px;
     margin-top: -180px;
-    background-color: #848e99;
-    margin-left: 30px;
+    background-color: indianred;
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 .right{
     float: right;
-    width: 800px;
+    width: 700px;
+    margin-right: 40px;
+    font-size: 17px;
+    line-height: 1.5;
 }
 .icon{
     width: 30px;
